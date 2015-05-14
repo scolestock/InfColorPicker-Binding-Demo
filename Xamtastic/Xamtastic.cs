@@ -13,6 +13,25 @@ namespace Xamtastic
     {
         public App ()
         {
+            var button = new ExtendedButton
+            {
+                Text = "Test Button",
+                TextColor = Color.Black,
+                BorderWidth = 1,
+                BorderRadius = 2,
+                Image = "Icon-Small.png",
+                ShadowOffset = 3
+            };
+
+            var button2 = new Button
+            {
+                Text = "Test Button2",
+                TextColor = Color.Black,
+                BorderWidth = 1,
+                BorderRadius = 2,
+                Image = "Icon-Small.png"
+            };
+
             // The root page of your application
             MainPage = new ContentPage {
                 Content = new StackLayout {
@@ -20,8 +39,10 @@ namespace Xamtastic
                     Children = {
                         new Label {
                             XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
+                            Text = "Welcome to Xamarin Forms!",
+                        },
+                        button,
+                        button2
                     }
                 }
             };
@@ -41,6 +62,11 @@ namespace Xamtastic
         {
             // Handle when your app resumes
         }
+    }
+
+    public class ExtendedButton : Button
+    {
+        public int ShadowOffset { get; set; }
     }
 }
 
