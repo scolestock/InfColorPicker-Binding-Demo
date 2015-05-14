@@ -19,7 +19,7 @@ namespace Xamtastic
                 TextColor = Color.Black,
                 BorderWidth = 1,
                 BorderRadius = 2,
-                Image = "Icon-Small.png",
+                Image = "icon.png",
                 ShadowOffset = 3
             };
 
@@ -29,7 +29,7 @@ namespace Xamtastic
                 TextColor = Color.Black,
                 BorderWidth = 1,
                 BorderRadius = 2,
-                Image = "Icon-Small.png"
+                Image = "icon.png"
             };
 
             // The root page of your application
