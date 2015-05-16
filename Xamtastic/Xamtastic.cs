@@ -13,8 +13,11 @@ namespace Xamtastic
     {
         public App ()
         {
+            var button = new Button { Text = "Show ColorPick" };
+            button.Clicked += (sender, e) => this.MainPage.Navigation.PushAsync(new ColorPickPage());
+
             // The root page of your application
-            MainPage = new ContentPage {
+            MainPage = new NavigationPage(new ContentPage {
                 Content = new StackLayout {
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
@@ -22,10 +25,11 @@ namespace Xamtastic
                             XAlign = TextAlignment.Center,
                             Text = "Welcome to Xamarin Forms!",
                         },
-                   
+                        button
                     }
                 }
-            };
+            });
+
         }
 
         protected override void OnStart()

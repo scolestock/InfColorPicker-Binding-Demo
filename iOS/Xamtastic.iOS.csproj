@@ -83,6 +83,10 @@
       <Project>{28E0244A-64DC-49F3-9512-11CFBE40843C}</Project>
       <Name>Xamtastic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\InfColorPickerBinding\InfColorPickerBinding.csproj">
+      <Project>{99F6AC22-7CB3-4D6B-B9D4-1A1E10D4E2A1}</Project>
+      <Name>InfColorPickerBinding</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default.png" />
@@ -104,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="InfColorPickerView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -113,6 +118,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="ColorPickPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
