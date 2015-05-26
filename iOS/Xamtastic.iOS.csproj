@@ -120,6 +120,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ColorPickPageRenderer.cs" />
     <Compile Include="ColorPickViewRenderer.cs" />
+    <Compile Include="ExtendedButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />

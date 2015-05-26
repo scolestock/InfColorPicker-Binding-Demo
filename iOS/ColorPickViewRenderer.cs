@@ -10,10 +10,10 @@ using Xamarin.Forms;
 using Xamtastic;
 using Xamtastic.iOS;
 
-// First arg: What are we rendering for?  Second arg: What class should do the rendering?
 using UIKit;
 using InfColorPickerBinding;
 
+// First arg: What are we rendering for?  Second arg: What class should do the rendering?
 [assembly: ExportRenderer(typeof(ColorPickView), typeof(ColorPickViewRenderer))]
 namespace Xamtastic.iOS
 {
@@ -34,16 +34,13 @@ namespace Xamtastic.iOS
 
                 this.SetNativeControl(this.viewController.View);
             } 
-
-            // TODO: Is this needed?
-            Control.Frame = this.Frame;
-            Control.Bounds = this.Bounds;
         }
 
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged (sender, e);
 
+            // If the ColorPickView's bindable SourceColor property has changed, let's react by setting source color on the the InfColorPicker
             if(e.PropertyName == "SourceColor")
             {
                 this.viewController.SourceColor = ((ColorPickView)sender).SourceColor.ToUIColor();
@@ -61,6 +58,7 @@ namespace Xamtastic.iOS
 
             public override void ColorPickerControllerDidChangeColor(InfColorPickerController controller)
             {
+                // If the InfColorPicker ResultColor has changed, let's react by setting result color on our ColorPickView bindable property
                 UIColor resultColor = controller.ResultColor;
 
                 nfloat red, green, blue, alpha;

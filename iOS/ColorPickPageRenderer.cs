@@ -10,10 +10,10 @@ using Xamarin.Forms;
 using Xamtastic;
 using Xamtastic.iOS;
 
-// First arg: What are we rendering for?  Second arg: What class should do the rendering?
 using UIKit;
 using InfColorPickerBinding;
 
+// First arg: What are we rendering for?  Second arg: What class should do the rendering?
 [assembly: ExportRenderer(typeof(ColorPickPage), typeof(ColorPickPageRenderer))]
 namespace Xamtastic.iOS
 {

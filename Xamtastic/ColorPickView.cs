@@ -10,19 +10,12 @@ using System.Runtime.CompilerServices;
 
 namespace Xamtastic
 {
-    public class ColorPickView : ContentView, INotifyPropertyChanged
+    /// <summary>
+    /// This class acts as the Xamarin Forms view for the underlying native functionality we are wrapping within InfColorPicker.
+    /// Only job at the moment is to house bindable properties.
+    /// </summary>
+    public class ColorPickView : ContentView
     {
-//        public event PropertyChangedEventHandler PropertyChanged;
-//
-//        void OnPropertyChanged([CallerMemberName] string propertyName = null)
-//        {
-//            var handler = PropertyChanged;
-//            if (handler != null)
-//            {
-//                handler(this, new PropertyChangedEventArgs(propertyName));
-//            }
-//        }
-
         public static BindableProperty ResultColorProperty =
             BindableProperty.Create<ColorPickView, Color>(
                 control => control.ResultColor,
@@ -61,9 +54,6 @@ namespace Xamtastic
             }
         }
 
-        public ColorPickView ()
-        {
-        }
     }
 }
 
